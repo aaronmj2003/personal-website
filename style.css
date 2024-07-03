@@ -1,9 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
@@ -13,16 +19,22 @@ header {
     text-align: center;
 }
 
+header .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
 header a {
     color: #fff;
     text-decoration: none;
 }
 
-section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 800px;
+main {
     background: #fff;
+    padding: 2rem;
+    margin: 2rem 0;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
