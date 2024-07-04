@@ -4,71 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Jones | Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <img src="images/profile.jpg" alt="Aaron Jones" class="profile-img">
-            <h1>Aaron Jones</h1>
-            <p>Product Manager and Data Scientist</p>
-            <p>Seattle, WA | <a href="mailto:aaronj23@uw.edu">aaronj23@uw.edu</a></p>
-            <p><a href="https://www.linkedin.com/in/aaron-matthew-jones/">LinkedIn</a></p>
+        <nav>
+            <div class="logo">A.JONES</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Hey! My name is Aaron Jones<br>Welcome to my website!</h1>
+                <p><a href="mailto:aaronj23@uw.edu">Email</a> | <a href="https://www.linkedin.com/in/aaron-matthew-jones/">LinkedIn</a></p>
+            </div>
+            <div class="intro-image">
+                <img src="images/profile.jpg" alt="Aaron Jones">
+            </div>
         </div>
     </header>
-    <main class="container">
-        <section>
-            <h2>Education</h2>
-            <p><strong>University of Washington</strong> (Expected 2025)</p>
-            <p>B.S. in Informatics – Focus areas: Product Management and Data Science</p>
-            <p>Relevant Coursework: Elements of Statistical Methods, Product and Information Systems Management, Client-Side Web Development, Research Methods, Design Methods, Analytics for Business Intelligence, Business Data Management</p>
-            <p><strong>Bellevue College</strong></p>
-            <p>A.S. in Computer Science (Sept. 2021 – June 2023)</p>
-            <p>Relevant Coursework: Fundamentals of CS I & II, General Engineering Physics I, Introduction to Statistics, Calculus III, Public Speaking</p>
-            <p>Cumulative GPA: 3.65, Dean’s List Fall 2023, Spring 2024</p>
-        </section>
-        <section>
-            <h2>Work Experience</h2>
-            <h3>Data Literacy</h3>
-            <p><strong>Product Manager</strong> (2024-Present)</p>
-            <ul>
-                <li>Leading product development of dataliteracy.ai, integrating generative AI to design user-centric learning experiences for data literacy education.</li>
-            </ul>
-            <p><strong>Content Strategist</strong> (2022-2024)</p>
-            <ul>
-                <li>Developed social media content strategies, implementing features to optimize content quality and social media outreach.</li>
-                <li>Performed data analysis using R and Tableau to optimize email and social media marketing campaigns, leading to an 8% increase in client interactions and retention.</li>
-                <li>Produced, filmed, and edited video content and performed stakeholder analysis for ongoing client projects, leading to improved client relations and quality of video content.</li>
-            </ul>
-            <h3>Kadama</h3>
-            <p><strong>Business Administrator</strong> (Dec. 2022 – May 2023)</p>
-            <ul>
-                <li>Performed data analysis on customer support data using R and Excel to optimize internal systems, improving customer retention by 11% and decreasing negative customer experiences by 25%.</li>
-                <li>Led customer tech support team and analyzed thousands of customer support tickets using Excel and R to improve customer experience, leading to a 25% decrease in negative experiences.</li>
-            </ul>
-            <h3>Redapt</h3>
-            <p><strong>Network Integrator Intern</strong> (June 2022 – Sept. 2022)</p>
-            <ul>
-                <li>Built corporate-scale network topologies and programmed routers and switches using Cisco CCNA and CCNP practices.</li>
-                <li>Assembled and distributed servers for integration into data centers, delivering hundreds of servers to clients.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Languages:</strong> R, SQL, Java, JS, HTML, CSS</li>
-                <li><strong>Technologies:</strong> Azure, AWS, Git, React, Microsoft Office, Tableau, Axure, Cisco CCNA and CCNP trained</li>
-                <li><strong>Focus Areas:</strong> Product Management, UI Design, Data Science, Content Strategy, Social Media Marketing</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Additional</h2>
-            <ul>
-                <li>Currently leading “QuickResolve AI” team, integrating generative AI into customer support software.</li>
-                <li>Avid League of Legends player, participating in local UW tournaments and club events.</li>
-                <li>Enjoys hiking, backpacking, snowboarding, longboarding, and bodysurfing.</li>
-            </ul>
+    <main>
+        <section id="introduction" class="introduction">
+            <div class="container">
+                <div class="intro-content">
+                    <div class="intro-img">
+                        <img src="images/introduction-picture.png" alt="Introduction Image">
+                    </div>
+                    <div class="intro-text-content">
+                        <h2>Introduction</h2>
+                        <p>Hey! My name is Aaron Jones, I am from Seattle, WA. Currently, I am a Product Manager at Data Literacy and an undergraduate student at the University of Washington. My hobbies include playing video games, hiking, snowboarding, golfing, and learning more about cars. I am majoring in <a href="https://ischool.uw.edu/programs/informatics">Informatics</a> with a focus in Product Management and Data Science. On the side, I am also leading the “QuickResolve AI” team, a student-run project focused on integrating generative AI to customer support software. Feel free to reach out at any time!</p>
+                        <div class="tabs">
+                            <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+                            <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+                            <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+                        </div>
+                        <div id="Skills" class="tabcontent">
+                            <p><span style="color: red;"><strong>Languages:</strong></span> R, SQL, Java, JS, HTML, CSS</p>
+                            <p><span style="color: purple;"><strong>Technologies:</strong></span> Azure, AWS, Git, React, Microsoft Office, Tableau, Axure, Cisco CCNA and CCNP trained</p>
+                        </div>
+                        <div id="Experience" class="tabcontent">
+                            <p><img src="images/data-literacy-logo.jfif" alt="Data Literacy Logo" class="company-logo"><span style="color: #7CB9E8;"><strong>Data Literacy</strong></span><br>Product Manager (2024-Present), Content Strategist (2022-2024)</p>
+                            <p><img src="images/kadama-logo.jfif" alt="Kadama Logo" class="company-logo"><span style="color: #3457D5;"><strong>Kadama</strong></span><br>Business Administrator (Dec. 2022 – May 2023)</p>
+                            <p><img src="images/redapt-logo.jfif" alt="Redapt Logo" class="company-logo"><span style="color: #17B169;"><strong>Redapt</strong></span><br>Network Integrator Intern (June 2022 – Sept. 2022)</p>
+                        </div>
+                        <div id="Education" class="tabcontent">
+                            <p><img src="images/uw-logo.jfif" alt="University of Washington Logo" class="company-logo"><span style="color: purple;"><strong>University of Washington</strong></span> (Expected 2025)<br>B.S. in Informatics – Focus areas: Product Management and Data Science</p>
+                            <p><img src="images/bc-logo.jfif" alt="Bellevue College Logo" class="company-logo"><span style="color: #7CB9E8;"><strong>Bellevue College</strong></span> (Sept. 2021 – June 2023)<br>A.S. in Computer Science</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    <footer id="contact">
+        <div class="container">
+            <p>Contact me using my references below!</p>
+            <p>(425)-681-4155 | <a href="mailto:aaronj23@uw.edu">aaronj23@uw.edu</a> | <a href="https://www.linkedin.com/in/aaron-matthew-jones/">LinkedIn</a></p>
+            <p>&copy; 2024 Aaron Jones. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementsByClassName("tablinks")[0].click();
+    </script>
 </body>
 </html>
