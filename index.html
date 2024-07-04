@@ -13,6 +13,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#personal-life">Personal Life</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -48,15 +49,15 @@
                         <div id="Experience" class="tabcontent">
                             <p><a href="https://www.dataliteracy.com" target="_blank">
                                 <img src="images/data-literacy-logo.jfif" alt="Data Literacy Logo" class="company-logo"></a>
-                                <span class = "company-name" style="color: #7CB9E8;"><strong>Data Literacy</strong></span><br>Product Manager (2024-Present), Content Strategist (2022-2024)
+                                <span class="company-name" style="color: #7CB9E8;"><strong>Data Literacy</strong></span><br>Product Manager (2024-Present), Content Strategist (2022-2024)
                             </p>
                             <p><a href="https://www.kadama.com" target="_blank">
                                 <img src="images/kadama-logo.jfif" alt="Kadama Logo" class="company-logo"></a>
-                                <span class = "company-name" style="color: #3457D5;"><strong>Kadama</strong></span><br>Business Administrator (Dec. 2022 – May 2023)
+                                <span class="company-name" style="color: #3457D5;"><strong>Kadama</strong></span><br>Business Administrator (Dec. 2022 – May 2023)
                             </p>
                             <p><a href="https://www.redapt.com" target="_blank">
                                 <img src="images/redapt-logo.jfif" alt="Redapt Logo" class="company-logo"></a>
-                                <span class = "company-name" style="color: #17B169;"><strong>Redapt</strong></span><br>Network Integrator Intern (June 2022 – Sept. 2022)
+                                <span class="company-name" style="color: #17B169;"><strong>Redapt</strong></span><br>Network Integrator Intern (June 2022 – Sept. 2022)
                             </p>
                         </div>
                         <div id="Education" class="tabcontent">
@@ -70,6 +71,26 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section id="personal-life" class="personal-life">
+            <h2>Personal Life</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/personal1.jpg" alt="Personal Image 1" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal2.jpg" alt="Personal Image 2" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal3.jpg" alt="Personal Image 3" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal4.jpg" alt="Personal Image 4" class="expandable">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/personal5.jpg" alt="Personal Image 5" class="expandable">
                 </div>
             </div>
         </section>
@@ -96,6 +117,20 @@
             evt.currentTarget.className += " active";
         }
         document.getElementsByClassName("tablinks")[0].click();
+
+        // Expandable images
+        const expandableImages = document.querySelectorAll('.expandable');
+        expandableImages.forEach(img => {
+            img.addEventListener('click', () => {
+                if (img.style.transform === 'scale(1.5)') {
+                    img.style.transform = 'scale(1)';
+                    img.style.zIndex = '1';
+                } else {
+                    img.style.transform = 'scale(1.5)';
+                    img.style.zIndex = '10';
+                }
+            });
+        });
     </script>
 </body>
 </html>

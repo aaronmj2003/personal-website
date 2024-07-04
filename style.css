@@ -174,3 +174,40 @@ footer a {
     vertical-align: middle;
     text-decoration: none;
 }
+
+.personal-life {
+    padding: 4rem 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Expandable images */
+.expandable {
+    cursor: pointer;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.expandable:active {
+    transform: scale(1.5);
+    z-index: 10;
+}
