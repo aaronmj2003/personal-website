@@ -10,6 +10,8 @@ html {
     scroll-behavior: smooth;
 }
 
+/* nav bar */
+
 header {
     background: #fff;
     padding: 2rem 0;
@@ -56,6 +58,8 @@ nav ul li a:hover {
     padding: 4rem 2rem 6rem 2rem;
 }
 
+/* homepage */
+
 .intro-text {
     flex: 1;
     text-align: left;
@@ -96,6 +100,8 @@ nav ul li a:hover {
     padding: 0 20px;
 }
 
+/* Introduction */
+
 .introduction {
     padding: 4rem 2rem 6rem 2rem;
     margin: 1rem 0;
@@ -123,6 +129,10 @@ nav ul li a:hover {
 .intro-text-content {
     flex: 2;
     padding-left: 2rem;
+}
+.intro-text-content a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* Tabs */
@@ -173,6 +183,8 @@ nav ul li a:hover {
     margin-top: 0;
 }
 
+/* footer */
+
 footer {
     background: #333;
     color: #fff;
@@ -196,6 +208,8 @@ footer a {
     vertical-align: middle;
     text-decoration: none;
 }
+
+/* personal life */
 
 .personal-life {
     padding: 4rem 2rem;
@@ -247,17 +261,17 @@ footer a {
     width: 100%;
     height: 66%; /* Cover bottom two-thirds of the image */
     color: white;
-    background: rgba(0, 0, 0, 0.7); /* Darker background for better text visibility */
+    background: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    font-size: 1.25rem; /* Adjust font size to fit the text properly */
+    font-size: 1.25rem; 
     display: flex;
     align-items: center;
     justify-content: center;
-    box-sizing: border-box; /* Ensure padding is included in the width/height calculations */
-    overflow: hidden; /* Hide overflow text */
+    box-sizing: border-box; 
+    overflow: hidden; 
 }
 
 .gallery-item img {
