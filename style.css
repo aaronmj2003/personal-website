@@ -128,7 +128,7 @@ nav ul li a:hover {
 /* Tabs */
 .tabs {
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: inherit;
     margin-top: 20px;
     border: none;
 }
@@ -145,7 +145,8 @@ nav ul li a:hover {
 }
 
 .tabs button:hover {
-    background-color: #ddd;
+    background-color: inherit;
+    color: red;
 }
 
 .tabs button.active {
