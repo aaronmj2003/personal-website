@@ -149,8 +149,8 @@ nav ul li a:hover {
 }
 
 .tabs button.active {
-    color: #333;
-    border-bottom: 2px solid #333;
+    color: red;
+    border-bottom: 2px solid red;
 }
 
 .tabcontent-container {
