@@ -103,7 +103,7 @@
                         <img src="images/resume-icon.png" alt="Resume Logo" class="link-logo">
                         <div class="link-text">
                             <h3>Resume</h3>
-                            <p>Below is a download link for my resume, which contains an in-depth overview of my skills, education, and work experiences.</p>
+                            <p>Below is a download link for my resume.</p>
                             <span>see my resume</span>
                         </div>
                     </div>
@@ -115,18 +115,23 @@
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="images/personal1.jpg" alt="Personal Image 1" class="expandable">
+                    <div class="overlay-text">I love going on hikes and backpacking! In this picture, I am at "Cahuilla Peak" in Palm Springs, CA!</div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/personal2.jpg" alt="Personal Image 2" class="expandable">
+                    <div class="overlay-text">I am very close with all of my brothers, including Simon who is in this picture with me!</div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/personal3.jpg" alt="Personal Image 3" class="expandable">
+                    <div class="overlay-text">I love doing fun stuff with my girlfriend Helena! Here's us at one of her sorority formals.</div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/personal4.jpg" alt="Personal Image 4" class="expandable">
+                    <div class="overlay-text">I'm close with my immediate family. Here's us at Ben's wedding! (He's the one being held up, if you couldn't tell)</div>
                 </div>
                 <div class="gallery-item">
                     <img src="images/personal5.jpg" alt="Personal Image 5" class="expandable">
+                    <div class="overlay-text">I am very close with my friends at UW! Here's a picture of me (left), Ben (center), and Brian (right)</div>
                 </div>
             </div>
         </section>
@@ -138,6 +143,7 @@
             <p>&copy; 2024 Aaron Jones. All Rights Reserved.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
     <script>
         function openTab(evt, tabName) {
             var i, tabcontent, tablinks;
@@ -153,20 +159,6 @@
             evt.currentTarget.className += " active";
         }
         document.getElementsByClassName("tablinks")[0].click();
-
-        // Expandable images
-        const expandableImages = document.querySelectorAll('.expandable');
-        expandableImages.forEach(img => {
-            img.addEventListener('click', () => {
-                if (img.style.transform === 'scale(1.5)') {
-                    img.style.transform = 'scale(1)';
-                    img.style.zIndex = '1';
-                } else {
-                    img.style.transform = 'scale(1.5)';
-                    img.style.zIndex = '10';
-                }
-            });
-        });
     </script>
 </body>
 </html>

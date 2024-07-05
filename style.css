@@ -214,6 +214,46 @@ footer a {
     z-index: 10;
 }
 
+/* Style for the overlay text */
+
+.gallery-item {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 66%; /* Cover bottom two-thirds of the image */
+    color: white;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for better text visibility */
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 1.25rem; /* Adjust font size to fit the text properly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding is included in the width/height calculations */
+    overflow: hidden; /* Hide overflow text */
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.gallery-item img.expanded {
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+.gallery-item img.expanded + .overlay-text {
+    opacity: 1;
+}
+
+/* Links */
 .links {
     padding: 4rem 2rem;
     background-color: #f4f4f4;
