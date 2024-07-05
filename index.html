@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Jones | Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
 </head>
 <body>
     <header>
@@ -39,37 +40,39 @@
                         <h2>Introduction</h2>
                         <p>Hey! My name is <span style ="color: red">Aaron Jones</span>, I am from Seattle, WA. Currently, I am a Product Manager at Data Literacy and an undergraduate student at the University of Washington. My hobbies include playing video games, golfing, hiking, snowboarding, and learning more about cars. I am majoring in <a href="https://ischool.uw.edu/programs/informatics">Informatics</a> with a focus in Product Management and Data Science. On the side, I am also leading the “QuickResolve AI” team, a student-run project focused on integrating generative AI to customer support software. <span style="color: red;">Feel free to reach out at any time!</span></p>
                         <div class="tabs">
-                            <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+                            <button class="tablinks active" onclick="openTab(event, 'Skills')">Skills</button>
                             <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
                             <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
                         </div>
-                        <div id="Skills" class="tabcontent">
-                            <p><span style="color: red;"><strong>Languages:</strong></span> R, SQL, Java, JS, HTML, CSS</p>
-                            <p><span style="color: purple;"><strong>Technologies:</strong></span> Azure, AWS, Git, React, Microsoft Office, Tableau, Axure, Cisco CCNA and CCNP trained</p>
-                        </div>
-                        <div id="Experience" class="tabcontent">
-                            <p><a href="https://www.dataliteracy.com" target="_blank">
-                                <img src="images/data-literacy-logo.jfif" alt="Data Literacy Logo" class="company-logo"></a>
-                                <span class="company-name" style="color: #7CB9E8;"><strong>Data Literacy</strong></span><br>Product Manager (2024-Present), Content Strategist (2022-2024)
-                            </p>
-                            <p><a href="https://www.kadama.com" target="_blank">
-                                <img src="images/kadama-logo.jfif" alt="Kadama Logo" class="company-logo"></a>
-                                <span class="company-name" style="color: #3457D5;"><strong>Kadama</strong></span><br>Business Administrator (Dec. 2022 – May 2023)
-                            </p>
-                            <p><a href="https://www.redapt.com" target="_blank">
-                                <img src="images/redapt-logo.jfif" alt="Redapt Logo" class="company-logo"></a>
-                                <span class="company-name" style="color: #17B169;"><strong>Redapt</strong></span><br>Network Integrator Intern (June 2022 – Sept. 2022)
-                            </p>
-                        </div>
-                        <div id="Education" class="tabcontent">
-                            <p><a href="https://www.washington.edu/" target="_blank">
-                                <img src="images/uw-logo.jfif" alt="University of Washington Logo" class="company-logo"></a>
-                                <span style="color: purple;"><strong>University of Washington</strong></span> (Expected 2025)<br>B.S. in Informatics – Focus areas: Product Management and Data Science
-                            </p>
-                            <p><a href="https://www.bellevuecollege.edu/" target="_blank">
-                                <img src="images/bc-logo.jfif" alt="Bellevue College Logo" class="company-logo"></a>
-                                <span style="color: #7CB9E8;"><strong>Bellevue College</strong></span> (Sept. 2021 – June 2023)<br>A.S. in Computer Science
-                            </p>
+                        <div class="tabcontent-container">
+                            <div id="Skills" class="tabcontent active">
+                                <p><span style="color: red;"><strong>Languages:</strong></span> R, SQL, Java, JS, HTML, CSS</p>
+                                <p><span style="color: purple;"><strong>Technologies:</strong></span> Azure, AWS, Git, React, Microsoft Office, Tableau, Axure, Cisco CCNA and CCNP trained</p>
+                            </div>
+                            <div id="Experience" class="tabcontent">
+                                <p><a href="https://www.dataliteracy.com" target="_blank">
+                                    <img src="images/data-literacy-logo.jfif" alt="Data Literacy Logo" class="company-logo"></a>
+                                    <span class="company-name" style="color: #7CB9E8;"><strong>Data Literacy</strong></span><br>Product Manager (2024-Present), Content Strategist (2022-2024)
+                                </p>
+                                <p><a href="https://www.kadama.com" target="_blank">
+                                    <img src="images/kadama-logo.jfif" alt="Kadama Logo" class="company-logo"></a>
+                                    <span class="company-name" style="color: #3457D5;"><strong>Kadama</strong></span><br>Business Administrator (Dec. 2022 – May 2023)
+                                </p>
+                                <p><a href="https://www.redapt.com" target="_blank">
+                                    <img src="images/redapt-logo.jfif" alt="Redapt Logo" class="company-logo"></a>
+                                    <span class="company-name" style="color: #17B169;"><strong>Redapt</strong></span><br>Network Integrator Intern (June 2022 – Sept. 2022)
+                                </p>
+                            </div>
+                            <div id="Education" class="tabcontent">
+                                <p><a href="https://www.washington.edu/" target="_blank">
+                                    <img src="images/uw-logo.jfif" alt="University of Washington Logo" class="company-logo"></a>
+                                    <span style="color: purple;"><strong>University of Washington</strong></span> (Expected 2025)<br>B.S. in Informatics – Focus areas: Product Management and Data Science
+                                </p>
+                                <p><a href="https://www.bellevuecollege.edu/" target="_blank">
+                                    <img src="images/bc-logo.jfif" alt="Bellevue College Logo" class="company-logo"></a>
+                                    <span style="color: #7CB9E8;"><strong>Bellevue College</strong></span> (Sept. 2021 – June 2023)<br>A.S. in Computer Science
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,13 +152,13 @@
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tabcontent");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
             }
             tablinks = document.getElementsByClassName("tablinks");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].className = tablinks[i].className.replace(" active", "");
             }
-            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
             evt.currentTarget.className += " active";
         }
         document.getElementsByClassName("tablinks")[0].click();

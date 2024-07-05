@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -40,6 +40,11 @@ nav ul li a {
     color: #333;
 }
 
+nav ul li a:hover {
+    color: #fd5c63;
+    transform: translateY(-5px);
+}
+
 .intro {
     display: flex;
     align-items: center;
@@ -76,7 +81,7 @@ nav ul li a {
 }
 
 .intro-image img {
-    max-width: 32.5%;
+    max-width: 40%;
     height: auto;
     border-radius: 8px;
 }
@@ -116,11 +121,12 @@ nav ul li a {
     padding-left: 2rem;
 }
 
+/* Tabs */
 .tabs {
     overflow: hidden;
     background-color: #f1f1f1;
-    border: 1px solid #ccc;
     margin-top: 20px;
+    border: none;
 }
 
 .tabs button {
@@ -139,14 +145,23 @@ nav ul li a {
 }
 
 .tabs button.active {
-    background-color: #ccc;
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+
+.tabcontent-container {
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .tabcontent {
     display: none;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-top: none;
+}
+
+.tabcontent.active {
+    display: block;
 }
 
 .tabcontent h3 {
