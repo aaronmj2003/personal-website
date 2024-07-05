@@ -152,6 +152,7 @@ nav ul li a:hover {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 17px;
+    color: black;
 }
 
 .tabs button:hover {
@@ -397,6 +398,11 @@ footer a {
     .tabs button {
         padding: 10px;
         font-size: 15px;
+        color: black;
+    }
+
+    .tabs button.active {
+        color: red;
     }
 
     .tabcontent {
