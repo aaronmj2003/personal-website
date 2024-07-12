@@ -288,6 +288,85 @@ footer a {
     opacity: 1;
 }
 
+/* Projects */
+.projects {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-button {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-text h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.project-text span {
+    font-size: 0.875rem;
+    color: #666;
+}
+
+/* Background colors for project buttons */
+.dataliteracy {
+    background-color: #7CB9E8;
+}
+
+.quickresolve {
+    background-color: #fd5c63;
+}
+
+.informatics {
+    background-color: #DDA0DD;
+}
+
+.see-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.see-more-button {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-button:hover {
+    background-color: #fd5c63;
+}
+
 /* Links */
 .links {
     padding: 4rem 2rem;
@@ -322,11 +401,11 @@ footer a {
 }
 
 .github {
-    background-color: #fd5c63;
+    background-color: #808080;
 }
 
 .linkedin {
-    background-color: #fd5c63;
+    background-color: #007FFF;
 }
 
 .resume {
