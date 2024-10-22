@@ -44,11 +44,32 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+    /* transforming nav */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* transforming nav */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fd5c63;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #fd5c63;
     transform: translateY(-5px);
+}
+
+/* transforming nav hover after */
+nav ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 .intro {
@@ -58,7 +79,7 @@ nav ul li a:hover {
     padding: 4rem 2rem 6rem 2rem;
 }
 
-/* homepage */
+/* HOME */
 
 .intro-text {
     flex: 1;
@@ -79,7 +100,7 @@ nav ul li a:hover {
 }
 
 .intro-text a {
-    color: #333;
+    color: inherit;
     text-decoration: none;
 }
 
