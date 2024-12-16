@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Aaron Jones">
+    <meta name="description" content="Home page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Jones | Personal Website</title>
     <link rel="stylesheet" href="style.css">
@@ -12,20 +14,27 @@
     <header>
         <nav>
             <div class="logo"><span style="color: red;">A</span>.JONES</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#links">Links</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#personal-life">Personal Life</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#links">Links</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#personal-life">Personal Life</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
         <div class="intro">
             <div class="intro-text">
-                <h1>Hey! My name is <span style="color: red;">Aaron Jones</span><br>Welcome to my website!</br></h1>
-                <p><span style ="color: red;">Product Manager at </span><span style="color: #7CB9E8;"><a href="https://www.dataliteracy.com" target="_blank">Data Literacy</a></span> | <p><span style ="color: red;">Manager of Influencer Marketing at </span><span style="color: #6823FF;"><a href="https://www.turbolearn.ai/" target="_blank">Turbolearn Ai</a></span> |<br> <span style ="color: red;">Student at </span><span style="color: purple;"><a href="https://www.washington.edu/" target="_blank">University of Washington |</br></a></span> </p>
-                <p><a href="mailto:aaronj23@uw.edu">Email</a> | <a href="https://www.linkedin.com/in/aaron-matthew-jones/" target="_blank">LinkedIn</a></p>
+                <h1>Hey, My name is <span style="color: red;">Aaron Jones</span><br>Welcome to my website</br></h1>
+                <p><!--<span style ="color: red;">Product Manager at </span><span style="color: #7CB9E8;"><a href="https://www.dataliteracy.com" target="_blank">Data Literacy</a></span> | <p><span style ="color: red;">Manager of Influencer Marketing at </span><span style="color: #6823FF;"><a href="https://www.turbolearn.ai/" target="_blank">Turbolearn Ai</a></span> |<br> -->
+                   Studying Informatics at the <span style="color: purple;"><a href="https://www.washington.edu/" target="_blank">University of Washington</a></span></p>
+                <p>Read my blog<span style="color: red;"><a href="blog.html"> here</a></span> to see what I'm up to.</p>
+                <p><span style ="color: red;"><a href="mailto:aaronj23@uw.edu">Email</a></span> | <span style ="color: red;"><a href="https://www.linkedin.com/in/aaron-matthew-jones/" target="_blank">LinkedIn</a></span></p>
             </div>
             <div class="intro-image">
                 <img src="images/profile.jpg" alt="Aaron Jones">
@@ -41,7 +50,7 @@
                     </div>
                     <div class="intro-text-content">
                         <h2>Introduction</h2>
-                        <p>Hey! My name is <span style ="color: red">Aaron Jones</span>, I am from Seattle, WA. Right now, I'm a Product Manager at DataLiteracy, Manager of Influencer Marketing at Turbolearn Ai, and an undergraduate student at the University of Washington. My hobbies include playing video games, golfing, hiking, snowboarding, and learning more about cars. I am majoring in <span style="color: red;"><a href="https://ischool.uw.edu/programs/informatics" target="_blank">Informatics</a></span> with a focus in Product Management and Data Science. On the side, I am also leading the “QuickResolve AI” team, a student-run project focused on integrating generative AI to customer support software. <span style="color: red;"><a href="#contact">Feel free to reach out at any time!</a></span></p>
+                        <p>Hey, I'm <span style ="color: red">Aaron</span>. I live in Seattle and I'm an undergrad at the University of Washington. My hobbies include playing video games, golfing, hiking, snowboarding, and learning more about cars. I am majoring in <span style="color: red;"><a href="https://ischool.uw.edu/programs/informatics" target="_blank">Informatics</a></span> with a focus in Product Management and Data Science. On the side, I am also leading the “QuickResolve AI” team, a student-run project focused on integrating generative AI to customer support software. <span style="color: red;"><a href="#contact">Feel free to reach out at any time!</a></span></p>
                         <div class="tabs">
                             <button class="tablinks active" onclick="openTab(event, 'Skills')">Skills</button>
                             <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
@@ -50,7 +59,7 @@
                         <div class="tabcontent-container">
                             <div id="Skills" class="tabcontent active">
                                 <p><span style="color: red;"><strong>Languages:</strong></span> R, SQL, Java, JS, HTML, CSS</p>
-                                <p><span style="color: purple;"><strong>Technologies:</strong></span> Azure, AWS, Git, React, Microsoft Office, Tableau, Axure, Cisco CCNA and CCNP trained</p>
+                                <p><span style="color: purple;"><strong>Technologies:</strong></span> Azure, AWS, Git, React, Node.js, Microsoft Office, Tableau, Axure, Cisco CCNA and CCNP trained</p>
                             </div>
                             <div id="Experience" class="tabcontent">
                                 <p><a href="https://www.turbolearn.ai/" target="_blank">
@@ -77,7 +86,7 @@
                                 </p>
                                 <p><a href="https://www.bellevuecollege.edu/" target="_blank">
                                     <img src="images/bc-logo.jfif" alt="Bellevue College Logo" class="company-logo"></a>
-                                    <span style="color: #7CB9E8;"><strong>Bellevue College</strong></span> (Sept. 2021 – June 2023)<br>A.S. in Computer Science
+                                    <span style="color: #7CB9E8;"><strong>Bellevue College</strong></span> (Sept. 2021 – June 2023)<br>A.S.
                                 </p>
                             </div>
                         </div>
@@ -186,7 +195,7 @@
     </main>
     <footer id="contact">
         <div class="container">
-            <p>Contact me using my references below!</p>
+            <p>Contact me using my references:</p>
             <p>(425)-681-4155 | <a href="mailto:aaronj23@uw.edu">aaronj23@uw.edu</a> | <a href="https://www.linkedin.com/in/aaron-matthew-jones/">LinkedIn</a></p>
             <p>&copy; 2024 Aaron Jones. All Rights Reserved.</p>
         </div>

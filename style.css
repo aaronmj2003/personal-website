@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
@@ -10,8 +16,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* nav bar */
-
+/* NAV */
 header {
     background: #fff;
     padding: 2rem 0;
@@ -44,12 +49,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    /* transforming nav */
     position: relative;
     transition: color 0.3s ease;
 }
 
-/* transforming nav */
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -67,7 +70,6 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
-/* transforming nav hover after */
 nav ul li a:hover::after {
     transform: scaleX(1);
 }
@@ -79,8 +81,59 @@ nav ul li a:hover::after {
     padding: 4rem 2rem 6rem 2rem;
 }
 
-/* HOME */
+/* NAV DROPDOWN */
+.nav-menu .dropdown {
+    position: relative; 
+}
 
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 50;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    padding: 0;
+    list-style: none;
+    min-width: 180px;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* DROPDOWN HOVER EFFECTS */
+.dropdown-menu a:hover {
+    background-color: #fd5c63;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-menu .dropdown > a:hover {
+    color: #fd5c63;
+    transform: translateY(0);
+}
+
+
+/* INDEX.HTML */
 .intro-text {
     flex: 1;
     text-align: left;
@@ -122,7 +175,6 @@ nav ul li a:hover::after {
 }
 
 /* Introduction */
-
 .introduction {
     padding: 4rem 2rem 6rem 2rem;
     margin: 1rem 0;
@@ -205,8 +257,7 @@ nav ul li a:hover::after {
     margin-top: 0;
 }
 
-/* footer */
-
+/* FOOTER */
 footer {
     background: #333;
     color: #fff;
@@ -217,6 +268,10 @@ footer {
 footer a {
     color: #fff;
     text-decoration: none;
+}
+
+footer p{
+    margin: 0.5rem 0;
 }
 
 .company-logo {
@@ -231,8 +286,7 @@ footer a {
     text-decoration: none;
 }
 
-/* personal life */
-
+/* PERSONAL LIFE */
 .personal-life {
     padding: 4rem 2rem;
 }
@@ -259,7 +313,7 @@ footer a {
     transform: scale(1.1);
 }
 
-/* Expandable images */
+/* IMAGES EXPANDABLE */
 .expandable {
     cursor: pointer;
     transition: transform 0.3s ease, z-index 0.3s ease;
@@ -271,7 +325,6 @@ footer a {
 }
 
 /* Style for the overlay text */
-
 .gallery-item {
     position: relative;
 }
@@ -281,7 +334,7 @@ footer a {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 66%; /* Cover bottom two-thirds of the image */
+    height: 66%;
     color: white;
     background: rgba(0, 0, 0, 0.7); 
     padding: 20px;
@@ -309,7 +362,7 @@ footer a {
     opacity: 1;
 }
 
-/* Projects */
+/* PROJECTS */
 .projects {
     padding: 4rem 2rem;
     background-color: #f4f4f4;
@@ -357,7 +410,7 @@ footer a {
     color: #666;
 }
 
-/* Background colors for project buttons */
+/* BACKGROUND COLORS */
 .dataliteracy {
     background-color: #7CB9E8;
 }
@@ -388,7 +441,7 @@ footer a {
     background-color: #fd5c63;
 }
 
-/* Links */
+/* LINKS */
 .links {
     padding: 4rem 2rem;
     background-color: #f4f4f4;
@@ -458,6 +511,90 @@ footer a {
 .link-text span {
     font-size: 0.875rem;
     color: #666;
+}
+
+/* BLOG.HTML */
+.blog-posts {
+    padding: 2rem 2rem;
+    background-color: #f8f8ff;
+    text-align: center;
+}
+
+.blog-posts h1{
+    margin-bottom: 2rem; 
+    text-align: center; 
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #fd5c63;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #333;
+}
+
+/* next, previous page (later) */
+.pagination {
+    margin-top: 2rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.pagination a:hover {
+    color: #fd5c63;
 }
 
 /* Responsive Styles */
