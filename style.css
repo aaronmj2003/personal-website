@@ -132,6 +132,27 @@ nav ul li a:hover::after {
     transform: translateY(0);
 }
 
+/* blog blink effect */
+.blinking-blog {
+    animation: blink-red 1.5s ease-in-out 4;
+    color: #fd5c63; 
+    font-weight: bold;
+}
+
+@keyframes blink-red {
+    0% {
+        color: #fd5c63;
+    }
+    50% {
+        color: #fff; 
+        background-color: #fd5c63; 
+        padding: 0.2rem 0.5rem;
+        border-radius: 5px;
+    }
+    100% {
+        color: #fd5c63;
+    }
+}
 
 /* INDEX.HTML */
 .intro-text {
@@ -580,7 +601,7 @@ footer p{
     color: #333;
 }
 
-/* next, previous page (later) */
+/* next, previous page */
 .pagination {
     margin-top: 2rem;
 }
@@ -597,53 +618,157 @@ footer p{
     color: #fd5c63;
 }
 
+/* POST PAGE */
+.post-page {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-content h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.post-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.share-icons {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+}
+
+.comments-section {
+    margin-top: 2rem;
+}
+
+.comment-form label {
+    font-weight: bold;
+}
+
+.comment-form input,
+.comment-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
 /* Responsive Styles */
-@media only screen and (max-width: 600px) {
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-menu .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+        min-width: auto;
     }
 
     .intro {
         flex-direction: column;
-        align-items: center;
         text-align: center;
         padding: 2rem 1rem;
     }
 
-    .intro-text {
-        margin-right: 0;
+    .intro-text, .intro-image {
+        margin: 0;
         max-width: 100%;
-    }
-
-    .intro-image img {
-        max-width: 80%;
     }
 
     .intro-text h1 {
         font-size: 2rem;
     }
 
-    .intro-text p {
+    .intro-image img {
+        max-width: 60%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .project-container, .link-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .project-button, .link-button {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .blog-container {
+        gap: 1rem;
+    }
+
+    .blog-post {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* small screens*/
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        position: relative;
         margin: 0.5rem 0;
     }
 
-    .container {
-        padding: 0 10px;
+    nav .logo {
+        margin-bottom: 1rem;
     }
 
-    .tabs button {
-        padding: 10px;
-        font-size: 15px;
-        color: black;
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
     }
 
-    .tabs button.active {
-        color: red;
+    .nav-menu .dropdown-menu {
+        position: static;
+        text-align: center;
+        padding: 0;
     }
 
-    .tabcontent {
-        padding: 10px;
+    .intro {
+        padding: 2rem 1rem;
+    }
+
+    .intro-text h1 {
+        font-size: 1.0rem;
+    }
+    
+    .intro-text p {
+        font-size: 0.2rem; 
+        margin: 0.5rem 0; 
+    }
+
+    .intro-image img {
+        max-width: 80%;
     }
 
     .gallery {
@@ -651,25 +776,16 @@ footer p{
         gap: 5px;
     }
 
-    .link-button {
-        width: 90%;
-        padding: 1rem;
+    .project-container, .link-container {
+        flex-direction: column;
     }
 
-    .link-logo {
-        width: 40px;
-        height: 40px;
+
+    .blog-post {
+        max-width: 90%;
     }
 
-    .link-text h3 {
-        font-size: 1.25rem;
-    }
-
-    .link-text p {
+    footer {
         font-size: 0.875rem;
-    }
-
-    .link-text span {
-        font-size: 0.75rem;
     }
 }

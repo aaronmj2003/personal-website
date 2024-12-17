@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aaron Jones">
+    <meta name="description" content="Blog Post">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template | Aaron Jones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><span style="color: red;">A</span>.JONES</div>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#links">Links</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#personal-life">Personal Life</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="post-page">
+        <article class="post-content">
+            <h1>Blog Template</h1>
+            <p class="post-date"><span style="color: #fd5c63;">January 1, 2025 by Aaron Jones</span></p>
+            <div class="share-icons" style="display: flex; gap: 10px; align-items: center;">
+                <p><b>Share on:</b></p>
+                <!-- dont forget to change the last part of the url-->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://aaronmj2003.github.io/personal-website/post1.html" target="_blank">
+                    <img src="images/meta-logo.jpg" alt="Share on Facebook" style="width: 32px; height: 32px; vertical-align: middle;">
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://aaronmj2003.github.io/personal-website/post1.html&text=Check%20out%20Aaron's%20latest%20blog%20post" target="_blank">
+                    <img src="images/x-logo.jpg" alt="Share on Twitter" style="width: 32px; height: 32px; vertical-align: middle;">
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aaronmj2003.github.io/personal-website/post1.html&title=Blog%20Post%20Title&summary=Check%20out%20Aaron's%20latest%20blog%20post" target="_blank">
+                    <img src="images/linkedin-logo.jfif" alt="Share on LinkedIn" style="width: 32px; height: 32px; vertical-align: middle;">
+                </a>
+            </div>
+            <section>
+                <p>This is a template for future blogs. This is the body content where you can read my stuffs.</p>
+                <p>Images, code snippets, insights, random other stuffs here.</p>
+                <img src="images/sample-image.jpg" alt="Sample Image" style="max-width: 100%; height: auto;">
+            </section>
+        </article>
+        <section class="comments-section">
+            <h2>Leave a Comment</h2>
+            <form class="comment-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="comment">Comment:</label><br>
+                <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
+                <button type="submit" style="background-color: #fd5c63; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 5px;">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="container">
+            <p>Contact me:</p>
+            <p>(425)-681-4155 | <a href="mailto:aaronj23@uw.edu">aaronj23@uw.edu</a> | <a href="https://www.linkedin.com/in/aaron-matthew-jones/">LinkedIn</a></p>
+            <p>&copy; 2024 Aaron Jones. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
