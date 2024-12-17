@@ -35,6 +35,10 @@ nav .logo {
     font-weight: bold;
 }
 
+nav .logo a{
+    text-decoration: none;
+}
+
 nav ul {
     list-style: none;
     display: flex;
