@@ -138,7 +138,7 @@ nav ul li a:hover::after {
 
 /* blog blink effect */
 .blinking-blog {
-    animation: blink-red 1.5s ease-in-out 4;
+    animation: blink-red 1.5s ease-in-out 6;
     color: #fd5c63; 
     font-weight: bold;
 }
