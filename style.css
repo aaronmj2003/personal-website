@@ -838,12 +838,16 @@ footer p{
     }
     
     .intro-text p {
-        font-size: 0.2rem; 
+        font-size: 0.8rem; 
         margin: 0.5rem 0; 
     }
 
     .intro-image img {
         max-width: 80%;
+    }
+
+    .intro-text-content p{
+        font-size: 0.8rem;
     }
 
     .gallery {
@@ -862,5 +866,86 @@ footer p{
 
     footer {
         font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    nav .logo {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .intro-text {
+        margin: 0;
+    }
+
+    .intro-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .intro-text p {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .intro-image img {
+        max-width: 90%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-container, .link-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .project-button, .link-button {
+        width: 100%;
+        margin: 0;
+    }
+
+    .blog-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .blog-post {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1.5rem 1rem;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 1rem;
     }
 }
