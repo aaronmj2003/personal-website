@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Aaron Jones">
+    <meta name="description" content="Blog Post">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template | Aaron Jones</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><span style="color: red;">A</span><span style="color: black;">.JONES</span></a>
+            </div>
+            <ul class="nav-menu">
+                <li class="dropdown">
+                    <a href="index.html">Home</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#introduction">Introduction</a></li>
+                        <li><a href="index.html#links">Links</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#personal-life">Personal Life</a></li>
+                        <li><a href="index.html#contact">Contact Me</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="post-page">
+        <article class="post-content">
+            <h1>NFL Data Project</h1>
+            <p class="post-date"><span style="color: #fd5c63;">January 4, 2025 by Aaron Jones</span></p>
+            <div class="share-icons" style="display: flex; gap: 10px; align-items: center;">
+                <p><b>Share on:</b></p>
+                <!-- dont forget to change the last part of the url-->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://aaronmj2003.github.io/personal-website/NFL%20Offenses%20Tableau%20Project.html" target="_blank">
+                    <img src="images/meta-logo.jpg" alt="Share on Facebook" style="width: 32px; height: 32px; vertical-align: middle;">
+                </a>
+                <a href="https://twitter.com/intent/tweet?url=https://aaronmj2003.github.io/personal-website/NFL%20Offenses%20Tableau%20Project.html&text=Check%20out%20Aaron's%20latest%20blog%20post" target="_blank">
+                    <img src="images/x-logo.jpg" alt="Share on Twitter" style="width: 32px; height: 32px; vertical-align: middle;">
+                </a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://aaronmj2003.github.io/personal-website/NFL%20Offenses%20Tableau%20Project.html&title=Blog%20Post%20Title&summary=Check%20out%20Aaron's%20latest%20blog%20post" target="_blank">
+                    <img src="images/linkedin-logo.jfif" alt="Share on LinkedIn" style="width: 32px; height: 32px; vertical-align: middle;">
+                </a>
+            </div>
+            <section>
+                <h2>Chapter 1: Introdcution and Context</h2>
+                <p><b>October 27th, 2024</b><br>
+                    This project started thanks to the Seahawks regular season home game against the Bills on October 27th. I'm a massive Seahawks fan, and there's no worse feeling for me than seeing them lose at home. During the game, there were two botched snaps that went horribly wrong, and Seahawks QB Geno Smith was getting pressured all game by Buffalo's defense. 
+                    <br><br>
+                    <div class="centered-image">
+                        <img src="images/kdawg-recovers-a-bad-snap.jpg" alt="Kenneth Walker recovers a bad snap for the Seahawks agains the Bills" class="expandable-image">
+                    </div>
+                    <br><br>
+                    The frusrtation I felt while watching this game turned into an anger-fueled theory. I thought to myself, <i>"We'll NEVER win without a good O-line"</i>. Then I started thinking about NFL game theory (which I had zero idea about at the time). What makes an NFL team great? What separates a good NFL team from the rest? In my casual opinion, it was the O-line.
+                    <br><br>
+                    So, I set out to investigate NFL statistics to truly determine if there was a single position or statistic that leads to a higher success rate. I started by crafting an official hypothesis to guide my analysis:<br>
+                    <b>From 1970 to 2024 (the "Modern" era of football), does offesnive line perfomance, specifically the stat of average sacks per game, correlate to a higher winning percentage for each team over the course of the season?</b>
+                    <br><br>
+                    <h2>Chapter 2: Trying SQL</h2>
+                    <b>November 4th, 2024</b><br>
+                    I seeked out advice from my INFO 330 professor Bill Howe on the specific methods I could use and what data to analyze. He pointed me toward the NFL PBP (Play-by-Play) dataset on NFLsavant.com, a rich resource containing play-by-play data for every game. Armed with this lead, I decided to dive deeper.
+                    <br><br>
+                    I downloaded the play-by-play data, and decided to try and use SQL to analyze it first, since it was what I was learning at the time. 
+                    <br><br>
+                    To do so, I decided to set up a localhost server on my machine using PostgreSQL to host the csv file. This marked my first foray into PostgreSQL, a tool I was eager to try. Here's a look into my pgAdmin ecosystem, including the localhost server including the pbp2023 table (where I would insert data using SQL later):
+                    <div class="centered-image">
+                        <img src="images/postgreSQL_methods.png" alt="PostgreSQL ecosystem" class="expandable-image">
+                    </div>
+                    I tried importing the data inside of pgAdmin. But, this proved to be a more tedious task than I had anticipated (as you can see by my failed attempts above). So, I decided to go with the tride-and-true method of importing the data using SQL. I Then, I wrote a "CREATE TABLE" statement inside of a SQL query in Azure Data Studio, with the exact variable names and types of the PBP2023 csv.
+                    <br><br>
+                    This simple query below pointed to the csv file saved on my computer, and imported it into the new table I had just created. I verified that it worked by simply running a "SELECT *"" statement.
+                    <br><br>
+                    <div class="centered-image">
+                        <img src="images/delimiter.png" alt="Loading data into PBP table" class="expandable-image">
+                    </div>
+                    <br><br>
+                    <b>November 10th, 2024</b><br>
+                    After days of trial and error, I wrote several queries that anaylze the play-by-play data to assess offensive line perfomance for every game of the 2023 season. Here's an example of one that returns each team's total season "sackrate" in descending order, where a higher "sackrate" correlates to the number of times the team received a sack throughout the season:
+                    <br><br>
+                    <div class="centered-image">
+                        <img src="images/sack_rate_sql.png" alt="Sack rate per team" class="expandable-image">
+                    </div>
+                    <br><br>
+                    If you’re interested in the technical details and seeing more of the queries I wrote, you can <a href="files/NFL Data Project Queries.sql" target="_blank" download>download my full SQL file here</a> which includes everything I wrote. You'll also have to download the pbp2023 dataset, which you can find a link to <a href="https://nflsavant.com/about.php" target="_blank">here</a>.
+                    <br><br>
+                    While these queries yielded insightful metrics, I hit a roadblock when trying to visualize the data. Raw numbers alone couldn’t provide the holistic view I was seeking about offensive line impact. I needed a way to assess entire teams comprehensively to measure the true value of offensive line play.
+                    <br><br>
+                    With this roadblock and my upcoming final exams and projects, I officially put the NFL Offenses project on ice.
+                    <br><br>
+                    <h2>Chapter 3: Switching Gears to Tableau</h2>
+                    <b>December 15th, 2024</b><br>
+                    After my finals, I went back home to Redmond, WA to start my winter break. I revisited the project, and found myself yet again staring at a brick wall. 
+                    <br><br>
+                    I talked with my dad, Ben Jones, who just so happens to be an expert in data and an excellent mentor. He reviewed my projcet, and mentioned the idea of bringing my data into Tableau for visualization.
+                    <br><br>
+                    So, I re-evaluated my approach. I downloaded a new dataset from <a href="https://stathead.com/football/team-game-finder.cgi?request=1&match=team_game_combined_season&timeframe=seasons&year_min=1970&year_max=2023&comp_type=E&ccomp%5B1%5D=gt&cval%5B1%5D=0&cstat%5B1%5D=pass_sacked" target="_blank">Stathead.com</a>
+                    which returned the regular season statistics from every team from 1970 to 2024, including a variety of season-long statitics like TDs, Times Sacked, and wincount.
+                    <br><br>
+                    I needed to join this first dataset with another from stathead that included each team's defensive stats (such as sacks gained). This way, I could assess offensive and defensive performance for each team and get a perspecitve on a team's performance beyond just offensive line performance.
+                    <br><br>
+                    <b>December 17th, 2024</b><br>
+                    Since I wasn't using SQL anymore, I decided to give Tableau Prep Builder a try (which for me was free, since I was a student!). Turns out, Tableau Prep Builder is actually really effective at perfoming unions and joins without messing everything up. This is what my workflow looked like, where I unioned three datasets (offensive, defensive, and another with both of them to add more teams).
+                    <br><br>
+                    <div class="centered-image">
+                        <img src="images/tableau_prep.png" alt="Tableau Prep Builder workflow" class="expandable-image">
+                    </div>
+                    <br><br>
+                    <b>December 18th, 2024</b><br>
+                    Now that I had a full dataset, I could finally import the csv into Tableau and get to work. After trial and error, I created these three visualizations that I was happy with and pushed to Tableau Public. Here's those visualizations:
+                    <br><br>
+                </p>
+                <div id="lightbox" class="lightbox">
+                    <span class="close">&times;</span>
+                    <img class="lightbox-content" id="expandedImage" alt="Expanded image">
+                </div>
+                <div class="tableau-visualizations">
+                    <div class="tableauPlaceholder" id="viz1735944490738" style="position: relative;">
+                        <noscript>
+                            <a href="#"><img alt="Win % by Sacks Gained" src="https://public.tableau.com/static/images/NF/NFL_Offensive_Insights_Book/Sheet12/1_rss.png" style="border: none" /></a>
+                        </noscript>
+                        <object class="tableauViz" style="display:none;">
+                            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                            <param name="embed_code_version" value="3" />
+                            <param name="site_root" value="" />
+                            <param name="name" value="NFL_Offensive_Insights_Book/Sheet12" />
+                            <param name="tabs" value="no" />
+                            <param name="toolbar" value="yes" />
+                            <param name="static_image" value="https://public.tableau.com/static/images/NF/NFL_Offensive_Insights_Book/Sheet12/1.png" />
+                            <param name="animate_transition" value="yes" />
+                            <param name="display_static_image" value="yes" />
+                            <param name="display_spinner" value="yes" />
+                            <param name="display_overlay" value="yes" />
+                            <param name="display_count" value="yes" />
+                            <param name="language" value="en-US" />
+                            <param name="filter" value="publish=yes" />
+                        </object>
+                    </div>
+                    <br>
+                    <p>This first visualization displays each teams season long win percentage (x-axis) by the number of sacks they gained (y-axis). I used a method called "data segmentation" to break the data up into 4 quartiles. The piece of this data that stood out the most to me was the "High Sacks High Wins" relationship, wiht a P-value of < 0.0001, suggesting an existing relationship between getting sacks and winning games. However, the r-value of that relationship is ~0.1, which implies there is some link between the two, although not a highly telling one.</p>
+                    <br>
+                    <div class="tableauPlaceholder" id="viz1736021841781" style="position: relative;">
+                        <noscript>
+                            <a href="#"><img alt="Win % by Sack Differential (Opp was Sacked - Times Sacked)" src="https://public.tableau.com/static/images/NF/NFL_Offensive_Insights_Book/Sheet3/1_rss.png" style="border: none" /></a>
+                        </noscript>
+                        <object class="tableauViz" style="display:none;">
+                            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                            <param name="embed_code_version" value="3" />
+                            <param name="site_root" value="" />
+                            <param name="name" value="NFL_Offensive_Insights_Book/Sheet3" />
+                            <param name="tabs" value="no" />
+                            <param name="toolbar" value="yes" />
+                            <param name="static_image" value="https://public.tableau.com/static/images/NF/NFL_Offensive_Insights_Book/Sheet3/1.png" />
+                            <param name="animate_transition" value="yes" />
+                            <param name="display_static_image" value="yes" />
+                            <param name="display_spinner" value="yes" />
+                            <param name="display_overlay" value="yes" />
+                            <param name="display_count" value="yes" />
+                            <param name="language" value="en-US" />
+                            <param name="filter" value="publish=yes" />
+                        </object>
+                    </div>
+                    <br>
+                    <p>This next visualization is also highly informative. I was intriguied by the "High Sacks High Wins" relationship from my earlier visualization, and decided to create a new visualization that asseses each team's win percentage by their sack differential (times they sacked their opponent - times they were sacked) and the results seemed to correlate with my earlier findings. This one also had a highly signficant p-value of < 0.001. But just like the previous visualization, the r-value remains low at ~0.2.</p>
+                    <br>
+                    <div class="tableauPlaceholder" id="viz1736023008474" style="position: relative;">
+                        <noscript>
+                            <a href="#"><img alt="Win % by Times Sacked" src="https://public.tableau.com/static/images/NF/NFL_Offensive_Insights_Book/Sheet1/1_rss.png" style="border: none" /></a>
+                        </noscript>
+                        <object class="tableauViz" style="display:none;">
+                            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                            <param name="embed_code_version" value="3" />
+                            <param name="site_root" value="" />
+                            <param name="name" value="NFL_Offensive_Insights_Book/Sheet1" />
+                            <param name="tabs" value="no" />
+                            <param name="toolbar" value="yes" />
+                            <param name="static_image" value="https://public.tableau.com/static/images/NF/NFL_Offensive_Insights_Book/Sheet1/1.png" />
+                            <param name="animate_transition" value="yes" />
+                            <param name="display_static_image" value="yes" />
+                            <param name="display_spinner" value="yes" />
+                            <param name="display_overlay" value="yes" />
+                            <param name="display_count" value="yes" />
+                            <param name="language" value="en-US" />
+                            <param name="filter" value="publish=yes" />
+                        </object>
+                    </div>
+                </div>
+                <br>
+                <p>This final visualization is really when I started piecing things together. In this visualization, I compared each team's win percentage by the number of times they recevied sacks, and I was completely suprised by the outcome. Unlike the previous two, the data is much more sparatic here, with a measly r-value of ~0.01! This shook up my project and lead me to my final analysis.</p>
+                <br>
+                <script type="text/javascript">
+                    // first viz
+                    var divElement1 = document.getElementById('viz1735944490738');
+                    var vizElement1 = divElement1.getElementsByTagName('object')[0];
+                    vizElement1.style.width = '100%';
+                    vizElement1.style.height = (divElement1.offsetWidth * 0.75) + 'px';
+                    var scriptElement1 = document.createElement('script');
+                    scriptElement1.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement1.parentNode.insertBefore(scriptElement1, vizElement1);
+                    // second viz
+                    var divElement2 = document.getElementById('viz1736021841781');
+                    var vizElement2 = divElement2.getElementsByTagName('object')[0];
+                    vizElement2.style.width = '100%';
+                    vizElement2.style.height = (divElement2.offsetWidth * 0.75) + 'px';
+                    var scriptElement2 = document.createElement('script');
+                    scriptElement2.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement2.parentNode.insertBefore(scriptElement2, vizElement2);
+                    // third viz
+                    var divElement3 = document.getElementById('viz1736023008474');
+                    var vizElement3 = divElement3.getElementsByTagName('object')[0];
+                    vizElement3.style.width = '100%';
+                    vizElement3.style.height = (divElement3.offsetWidth * 0.75) + 'px';
+                    var scriptElement3 = document.createElement('script');
+                    scriptElement3.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement3.parentNode.insertBefore(scriptElement3, vizElement3);
+                </script>
+                <script>
+                    const lightbox = document.getElementById("lightbox");
+                    const expandedImage = document.getElementById("expandedImage");
+                    const images = document.querySelectorAll(".expandable-image");
+                    const closeBtn = document.querySelector(".lightbox .close");
+                    images.forEach(image => {
+                        image.addEventListener("click", () => {
+                            lightbox.style.display = "flex";
+                            expandedImage.src = image.src;
+                            expandedImage.alt = image.alt;
+                        });
+                    });
+                    closeBtn.addEventListener("click", () => {
+                        lightbox.style.display = "none";
+                    });
+                    lightbox.addEventListener("click", (event) => {
+                        if (event.target === lightbox) {
+                            lightbox.style.display = "none";
+                        }
+                    });
+                </script>                
+                <br>
+                <h2>Chapter 4: Final Takeaways and Next Steps</h2>
+                <p>
+                    <b>January 5th, 2024</b><br>
+                    So, here I am at the end of the road, one day before I start classes again at UW. 
+                    I learned a lot with this project! For starters, American Football is far more nuanced than I had originally assumed. 
+                    At the beginning of this project, even if I wouldn't have admitted it, I set out to try and prove my hypothesis that offesnive lines are
+                    the most impactful part of an NFL team. But as I devled deeper into this project, my viewpoint started to change.
+                    <br><br>
+                    Take the 2021 Cincinatti Bengals in my third visualiztion for example (you can find them at the furthest x point at 74 times sacked). When I was analyzing the relationship between times sacked and win percentage, this team
+                    stood out. They were the team with the highest count of times sacked, and yet that team went to a Superbowl.
+                    On the surface, the existance of this and other outlier teams undermine my hypothesis and should have derailed my project.
+                    But instead, it just changed my perspective.
+                    <br><br>
+                    The 2021 Bengals and other outliers like it suggests that there is more that goes into a NFL team's success than single statistics like sacks.
+                    Success is larger than the season-long perfomance of just a the offensive line and sacks, for example.
+                    <br><br>
+                    My biggest takeaway from this project is that when working with data, it's important to be <b>curious</b>. If really wanted to, I could have just
+                    handpicked play-by-play and regular season statistic data from any team I wanted, and "prove" that their success was due to their 
+                    offensive line (or anything else for that matter). But instead, it is far more valuable to take a more curious and widespread approach.
+                    <br><br>
+                    If I were to start this project all over again, I would change my hypothesis to:<br>
+                    <b>From 1970 to 2024 (the "Modern" era of football), does any specific game stat (excluding TDs) correlate to a higher winning percentage for each team over the course of the season?</b>
+                    <br><br>
+                    If I were to revisit this project, I would proceed with the next steps:
+                    <ul>
+                        <li>Analyze a wider variety of statistics beyond sacks, in an attempt to find the most "impactful" statistic (if it exists!)</li>
+                        <li>Try different methods of analyzing the data, such as Python</li>
+                        <li>Ask for input from my peers as to how I could have approached the project differently, and try it!</li>
+                    </ul>
+                    <br><br>
+                    <b>Thank you so much for reading about my NFL Data project!</b>
+                    If you're reading this and want to connect, feel free to <a href="linkedin.com/in/aaronjonesm/" target="_blank">connect with me on LinkedIn.</a>
+                    <br><br>
+                    Aaron Jones
+                </p>
+            </section>
+        </article>
+    </main>
+    <footer id="contact">
+        <div class="container">
+            <p>Contact me:</p>
+            <p>(425)-681-4155 | <a href="mailto:aaronmatthew.jones5@gmail.com">aaronmatthew.jones5@gmail.com</a> | <a href="https://www.linkedin.com/in/aaron-matthew-jones/">LinkedIn</a></p>
+            <p>&copy; 2024 Aaron Jones. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
