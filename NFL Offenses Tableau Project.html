@@ -51,12 +51,10 @@
             <section>
                 <h2>Chapter 1: Introdcution and Context</h2>
                 <p><b>October 27th, 2024</b><br>
-                    This project started thanks to the Seahawks regular season home game against the Bills on October 27th. I'm a massive Seahawks fan, and there's no worse feeling for me than seeing them lose at home. During the game, there were two botched snaps that went horribly wrong, and Seahawks QB Geno Smith was getting pressured all game by Buffalo's defense. 
-                    <br><br>
+                    This project started thanks to the Seahawks regular season home game against the Bills on October 27th. I'm a massive Seahawks fan, and there's no worse feeling for me than seeing them lose at home. During the game, there were two botched snaps that went horribly wrong, and Seahawks QB Geno Smith was getting pressured all game by Buffalo's defense.
                     <div class="centered-image">
                         <img src="images/kdawg-recovers-a-bad-snap.jpg" alt="Kenneth Walker recovers a bad snap for the Seahawks agains the Bills" class="expandable-image">
                     </div>
-                    <br><br>
                     The frusrtation I felt while watching this game turned into an anger-fueled theory. I thought to myself, <i>"We'll NEVER win without a good O-line"</i>. Then I started thinking about NFL game theory (which I had zero idea about at the time). What makes an NFL team great? What separates a good NFL team from the rest? In my casual opinion, it was the O-line.
                     <br><br>
                     So, I set out to investigate NFL statistics to truly determine if there was a single position or statistic that leads to a higher success rate. I started by crafting an official hypothesis to guide my analysis:<br>
@@ -75,18 +73,14 @@
                     I tried importing the data inside of pgAdmin. But, this proved to be a more tedious task than I had anticipated (as you can see by my failed attempts above). So, I decided to go with the tride-and-true method of importing the data using SQL. I Then, I wrote a "CREATE TABLE" statement inside of a SQL query in Azure Data Studio, with the exact variable names and types of the PBP2023 csv.
                     <br><br>
                     This simple query below pointed to the csv file saved on my computer, and imported it into the new table I had just created. I verified that it worked by simply running a "SELECT *"" statement.
-                    <br><br>
                     <div class="centered-image">
                         <img src="images/delimiter.png" alt="Loading data into PBP table" class="expandable-image">
                     </div>
-                    <br><br>
                     <b>November 10th, 2024</b><br>
                     After days of trial and error, I wrote several queries that anaylze the play-by-play data to assess offensive line perfomance for every game of the 2023 season. Here's an example of one that returns each team's total season "sackrate" in descending order, where a higher "sackrate" correlates to the number of times the team received a sack throughout the season:
-                    <br><br>
                     <div class="centered-image">
                         <img src="images/sack_rate_sql.png" alt="Sack rate per team" class="expandable-image">
                     </div>
-                    <br><br>
                     If you’re interested in the technical details and seeing more of the queries I wrote, you can <a href="files/NFL Data Project Queries.sql" target="_blank" download>download my full SQL file here</a> which includes everything I wrote. You'll also have to download the pbp2023 dataset, which you can find a link to <a href="https://nflsavant.com/about.php" target="_blank">here</a>.
                     <br><br>
                     While these queries yielded insightful metrics, I hit a roadblock when trying to visualize the data. Raw numbers alone couldn’t provide the holistic view I was seeking about offensive line impact. I needed a way to assess entire teams comprehensively to measure the true value of offensive line play.
@@ -106,11 +100,9 @@
                     <br><br>
                     <b>December 17th, 2024</b><br>
                     Since I wasn't using SQL anymore, I decided to give Tableau Prep Builder a try (which for me was free, since I was a student!). Turns out, Tableau Prep Builder is actually really effective at perfoming unions and joins without messing everything up. This is what my workflow looked like, where I unioned three datasets (offensive, defensive, and another with both of them to add more teams).
-                    <br><br>
                     <div class="centered-image">
                         <img src="images/tableau_prep.png" alt="Tableau Prep Builder workflow" class="expandable-image">
                     </div>
-                    <br><br>
                     <b>December 18th, 2024</b><br>
                     Now that I had a full dataset, I could finally import the csv into Tableau and get to work. After trial and error, I created these three visualizations that I was happy with and pushed to Tableau Public. Here's those visualizations:
                     <br><br>
