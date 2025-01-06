@@ -55,9 +55,9 @@
                     <div class="centered-image">
                         <img src="images/kdawg-recovers-a-bad-snap.jpg" alt="Kenneth Walker recovers a bad snap for the Seahawks agains the Bills" class="expandable-image">
                     </div>
-                    The frusrtation I felt while watching this game turned into an anger-fueled theory. I thought to myself, <i>"We'll NEVER win without a good O-line"</i>. Then I started thinking about NFL game theory (which I had zero idea about at the time). What makes an NFL team great? What separates a good NFL team from the rest? In my casual opinion, it was the O-line.
+                    The frusrtation I felt while watching this game turned into a theory. I thought to myself, <i>"We'll NEVER win without a good O-line"</i>. Then I started thinking about NFL game theory (which I had zero idea about at the time). What makes an NFL team great? What separates a good NFL team from the rest? In my casual opinion, it was the O-line.
                     <br><br>
-                    So, I set out to investigate NFL statistics to truly determine if there was a single position or statistic that leads to a higher success rate. I started by crafting an official hypothesis to guide my analysis:<br>
+                    So, I set out to investigate NFL statistics to truly determine if there was a single position or statistic related to the offensive line that leads to a higher success rate. I started by crafting an official hypothesis to guide my analysis:<br>
                     <b>From 1970 to 2024 (the "Modern" era of football), does offesnive line perfomance, specifically the stat of average sacks per game, correlate to a higher winning percentage for each team over the course of the season?</b>
                     <br><br>
                     <h2>Chapter 2: Trying SQL</h2>
@@ -70,7 +70,7 @@
                     <div class="centered-image">
                         <img src="images/postgreSQL_methods.png" alt="PostgreSQL ecosystem" class="expandable-image">
                     </div>
-                    I tried importing the data inside of pgAdmin. But, this proved to be a more tedious task than I had anticipated (as you can see by my failed attempts above). So, I decided to go with the tride-and-true method of importing the data using SQL. I wrote a "CREATE TABLE" statement inside of a SQL query in Azure Data Studio, with the exact variable names and types of the PBP2023 csv.
+                    I tried importing the data inside of pgAdmin. But, this proved to be a more tedious task than I had anticipated (as you can see by my failed attempts above). So, I decided to go with the tride-and-true method of importing the data using SQL. I wrote a "CREATE TABLE" statement inside with the exact variable names and types of the PBP2023 csv.
                     <br><br>
                     This simple query below pointed to the csv file saved on my computer, and imported it into the new table I had just created. I verified that it worked by simply running a "SELECT *"" statement.
                     <div class="centered-image">
