@@ -1,4 +1,28 @@
+// Dark mode — runs immediately to avoid flash of wrong theme
+(function () {
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Dark mode toggle
+    const toggle = document.getElementById('dark-mode-toggle');
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        if (toggle) toggle.textContent = theme === 'dark' ? '☀' : '🌙';
+    }
+    // Sync button icon with current theme
+    if (toggle) {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        toggle.textContent = current === 'dark' ? '☀' : '🌙';
+        toggle.addEventListener('click', () => {
+            const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+        });
+    }
+
     // Gallery: expand image on click, collapse on second click
     const expandableImages = document.querySelectorAll('.expandable');
 

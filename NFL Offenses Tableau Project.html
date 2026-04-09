@@ -6,6 +6,7 @@
     <meta name="description" content="Blog Post">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFL Data Project | Aaron Jones</title>
+    <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);})();</script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -14,7 +15,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="index.html"><span style="color: red;">A</span><span style="color: black;">.JONES</span></a>
+                <a href="index.html"><span style="color: var(--primary-color);">A</span><span style="color: var(--text-primary);">.JONES</span></a>
             </div>
             <ul class="nav-menu">
                 <li class="dropdown">
@@ -29,6 +30,7 @@
                 </li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
+            <button id="dark-mode-toggle" class="dark-toggle" aria-label="Toggle dark mode">🌙</button>
         </nav>
     </header>
     <main class="post-page">
