@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Gallery: expand image on click, collapse on second click
     const expandableImages = document.querySelectorAll('.expandable');
-    
+
     expandableImages.forEach(img => {
         img.addEventListener('click', () => {
             if (img.classList.contains('expanded')) {
@@ -17,6 +18,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Tabs: switch active tab on click
+    const tabButtons = document.querySelectorAll('.tablinks');
+    const tabContents = document.querySelectorAll('.tabcontent');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(button.dataset.tab).classList.add('active');
+            button.classList.add('active');
+        });
+    });
+
+    // Activate the first tab on load
+    if (tabButtons.length > 0) tabButtons[0].click();
 });
 
 window.addEventListener('scroll', function() {

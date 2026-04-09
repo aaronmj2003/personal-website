@@ -32,7 +32,7 @@
         </nav>
         <div class="intro">
             <div class="intro-text">
-                <h1>Hey, My name is <span style="color: red;">Aaron Jones</span><br>Welcome to my website</br></h1>
+                <h1>Hey, My name is <span style="color: red;">Aaron Jones</span><br>Welcome to my website</h1>
                 <p><!--<span style ="color: red;">Product Manager at </span><span style="color: #7CB9E8;"><a href="https://www.dataliteracy.com" target="_blank">Data Literacy</a></span> | <p><span style ="color: red;">Manager of Influencer Marketing at </span><span style="color: #6823FF;"><a href="https://www.turbolearn.ai/" target="_blank">Turbolearn Ai</a></span> |<br> -->
                    Studying Informatics at the <span style="color: purple;"><a href="https://www.washington.edu/" target="_blank">University of Washington</a></span></p>
                 <p>Read my blog<span style="color: red;"><a href="blog.html"> here</a></span> to see what I'm up to.</p>
@@ -57,9 +57,9 @@
                             I am majoring in <span style="color: red;"><a href="https://ischool.uw.edu/programs/informatics" target="_blank">Informatics</a></span> 
                             with a focus in Product Management and Data Science. I'm interested in Product Management, Data Analysis, and Software Development. <span style="color: red;"><a href="#contact">Feel free to reach out at any time!</a></span></p>
                         <div class="tabs">
-                            <button class="tablinks active" onclick="openTab(event, 'Skills')">Skills</button>
-                            <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
-                            <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+                            <button class="tablinks active" data-tab="Skills">Skills</button>
+                            <button class="tablinks" data-tab="Experience">Experience</button>
+                            <button class="tablinks" data-tab="Education">Education</button>
                         </div>
                         <div class="tabcontent-container">
                             <div id="Skills" class="tabcontent active">
@@ -188,21 +188,5 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    <script>
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.className += " active";
-        }
-        document.getElementsByClassName("tablinks")[0].click();
-    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="author" content="Aaron Jones">
     <meta name="description" content="Blog Post">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Template | Aaron Jones</title>
+    <title>NFL Data Project | Aaron Jones</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -49,16 +49,16 @@
                 </a>
             </div>
             <section>
-                <h2>Chapter 1: Introdcution and Context</h2>
+                <h2>Chapter 1: Introduction and Context</h2>
                 <p><b>October 27th, 2024</b><br>
                     This project started thanks to the Seahawks regular season home game against the Bills on October 27th. I'm a massive Seahawks fan, and there's no worse feeling for me than seeing them lose at home. During the game, there were two botched snaps that went horribly wrong, and Seahawks QB Geno Smith was getting pressured all game by Buffalo's defense.
                     <div class="centered-image">
                         <img src="images/kdawg-recovers-a-bad-snap.jpg" alt="Kenneth Walker recovers a bad snap for the Seahawks agains the Bills" class="expandable-image">
                     </div>
-                    The frusrtation I felt while watching this game turned into a theory. I thought to myself, <i>"We'll NEVER win without a good O-line"</i>. Then I started thinking about NFL game theory (which I had zero idea about at the time). What makes an NFL team great? What separates a good NFL team from the rest? In my casual opinion, it was the O-line.
+                    The frustration I felt while watching this game turned into a theory. I thought to myself, <i>"We'll NEVER win without a good O-line"</i>. Then I started thinking about NFL game theory (which I had zero idea about at the time). What makes an NFL team great? What separates a good NFL team from the rest? In my casual opinion, it was the O-line.
                     <br><br>
                     So, I set out to investigate NFL statistics to truly determine if there was a single position or statistic related to the offensive line that leads to a higher success rate. I started by crafting an official hypothesis to guide my analysis:<br>
-                    <b>From 1970 to 2024 (the "Modern" era of football), does offesnive line perfomance, specifically the stat of average sacks per game, correlate to a higher winning percentage for each team over the course of the season?</b>
+                    <b>From 1970 to 2024 (the "Modern" era of football), does offensive line performance, specifically the stat of average sacks per game, correlate to a higher winning percentage for each team over the course of the season?</b>
                     <br><br>
                     <h2>Chapter 2: Trying SQL</h2>
                     <b>November 4th, 2024</b><br>
@@ -70,14 +70,14 @@
                     <div class="centered-image">
                         <img src="images/postgreSQL_methods.png" alt="PostgreSQL ecosystem" class="expandable-image">
                     </div>
-                    I tried importing the data inside of pgAdmin. But, this proved to be a more tedious task than I had anticipated (as you can see by my failed attempts above). So, I decided to go with the tride-and-true method of importing the data using SQL. I wrote a "CREATE TABLE" statement inside with the exact variable names and types of the PBP2023 csv.
+                    I tried importing the data inside of pgAdmin. But, this proved to be a more tedious task than I had anticipated (as you can see by my failed attempts above). So, I decided to go with the tried-and-true method of importing the data using SQL. I wrote a "CREATE TABLE" statement inside with the exact variable names and types of the PBP2023 csv.
                     <br><br>
-                    This simple query below pointed to the csv file saved on my computer, and imported it into the new table I had just created. I verified that it worked by simply running a "SELECT *"" statement.
+                    This simple query below pointed to the csv file saved on my computer, and imported it into the new table I had just created. I verified that it worked by simply running a "SELECT *" statement.
                     <div class="centered-image">
                         <img src="images/delimiter.png" alt="Loading data into PBP table" class="expandable-image">
                     </div>
                     <b>November 10th, 2024</b><br>
-                    After days of trial and error, I wrote several queries that anaylze the play-by-play data to assess offensive line perfomance for every game of the 2023 season. Here's an example of one that returns each team's total season "sackrate" in descending order, where a higher "sackrate" correlates to the number of times the team received a sack throughout the season:
+                    After days of trial and error, I wrote several queries that analyze the play-by-play data to assess offensive line performance for every game of the 2023 season. Here's an example of one that returns each team's total season "sackrate" in descending order, where a higher "sackrate" correlates to the number of times the team received a sack throughout the season:
                     <div class="centered-image">
                         <img src="images/sack_rate_sql.png" alt="Sack rate per team" class="expandable-image">
                     </div>
@@ -96,10 +96,10 @@
                     So, I re-evaluated my approach. I downloaded a new dataset from <a href="https://stathead.com/football/team-game-finder.cgi?request=1&match=team_game_combined_season&timeframe=seasons&year_min=1970&year_max=2023&comp_type=E&ccomp%5B1%5D=gt&cval%5B1%5D=0&cstat%5B1%5D=pass_sacked" target="_blank">Stathead.com</a>
                     which returned the regular season statistics from every team from 1970 to 2024, including a variety of season-long statistics like TDs, Times Sacked, and wincount.
                     <br><br>
-                    I needed to join this first dataset with another from stathead that included each team's defensive stats (such as sacks gained). This way, I could assess offensive and defensive performance for each team and get a perspecitve on a team's performance beyond just offensive line performance.
+                    I needed to join this first dataset with another from stathead that included each team's defensive stats (such as sacks gained). This way, I could assess offensive and defensive performance for each team and get a perspective on a team's performance beyond just offensive line performance.
                     <br><br>
                     <b>December 17th, 2024</b><br>
-                    Since I wasn't using SQL anymore, I decided to give Tableau Prep Builder a try (which for me was free, since I was a student!). Turns out, Tableau Prep Builder is actually really effective at perfoming unions and joins without messing everything up. This is what my workflow looked like, where I unioned three datasets (offensive, defensive, and another with both of them to add more teams).
+                    Since I wasn't using SQL anymore, I decided to give Tableau Prep Builder a try (which for me was free, since I was a student!). Turns out, Tableau Prep Builder is actually really effective at performing unions and joins without messing everything up. This is what my workflow looked like, where I unioned three datasets (offensive, defensive, and another with both of them to add more teams).
                     <div class="centered-image">
                         <img src="images/tableau_prep.png" alt="Tableau Prep Builder workflow" class="expandable-image">
                     </div>
@@ -134,7 +134,7 @@
                         </object>
                     </div>
                     <br>
-                    <p>This first visualization displays each teams season long win percentage (x-axis) by the number of sacks they gained (y-axis). I used a method called "data segmentation" to break the data up into 4 quartiles. The piece of this data that stood out the most to me was the "High Sacks High Wins" relationship, wiht a P-value of < 0.0001, suggesting an existing relationship between getting sacks and winning games. However, the r-value of that relationship is ~0.1, which implies there is some link between the two, although not a highly telling one.</p>
+                    <p>This first visualization displays each teams season long win percentage (x-axis) by the number of sacks they gained (y-axis). I used a method called "data segmentation" to break the data up into 4 quartiles. The piece of this data that stood out the most to me was the "High Sacks High Wins" relationship, with a P-value of < 0.0001, suggesting an existing relationship between getting sacks and winning games. However, the r-value of that relationship is ~0.1, which implies there is some link between the two, although not a highly telling one.</p>
                     <br>
                     <div class="tableauPlaceholder" id="viz1736021841781" style="position: relative;">
                         <noscript>
@@ -158,7 +158,7 @@
                         </object>
                     </div>
                     <br>
-                    <p>This next visualization is also highly informative. I was intriguied by the "High Sacks High Wins" relationship from my earlier visualization, and decided to create a new visualization that asseses each team's win percentage by their sack differential (times they sacked their opponent - times they were sacked) and the results seemed to correlate with my earlier findings. This one also had a highly signficant p-value of < 0.001. But just like the previous visualization, the r-value remains low at ~0.2.</p>
+                    <p>This next visualization is also highly informative. I was intrigued by the "High Sacks High Wins" relationship from my earlier visualization, and decided to create a new visualization that assesses each team's win percentage by their sack differential (times they sacked their opponent - times they were sacked) and the results seemed to correlate with my earlier findings. This one also had a highly significant p-value of < 0.001. But just like the previous visualization, the r-value remains low at ~0.2.</p>
                     <br>
                     <div class="tableauPlaceholder" id="viz1736023008474" style="position: relative;">
                         <noscript>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <br>
-                <p>This final visualization is really when I started piecing things together. In this visualization, I compared each team's win percentage by the number of times they recevied sacks, and I was completely suprised by the outcome. Unlike the previous two, the data is much more sparatic here, with a measly r-value of ~0.01! This shook up my project and lead me to my final analysis.</p>
+                <p>This final visualization is really when I started piecing things together. In this visualization, I compared each team's win percentage by the number of times they received sacks, and I was completely surprised by the outcome. Unlike the previous two, the data is much more sporadic here, with a measly r-value of ~0.01! This shook up my project and led me to my final analysis.</p>
                 <br>
                 <script type="text/javascript">
                     // first viz
@@ -238,17 +238,17 @@
                     <b>January 5th, 2024</b><br>
                     So, here I am at the end of the road, one day before I start classes again at UW. 
                     I learned a lot with this project! For starters, the NFL is far more nuanced than I had originally thought. 
-                    At the beginning of this project, even if I wouldn't have admitted it, I set out to try and prove my hypothesis that offesnive lines are
+                    At the beginning of this project, even if I wouldn't have admitted it, I set out to try and prove my hypothesis that offensive lines are
                     the most impactful part of an NFL team. But as I got deeper into this project, my viewpoint started to change.
                     <br><br>
-                    Take the 2021 Cincinatti Bengals in my third visualiztion for example (you can find them at the furthest x point at 74 times sacked). 
+                    Take the 2021 Cincinnati Bengals in my third visualization for example (you can find them at the furthest x point at 74 times sacked). 
                     When I was analyzing the relationship between times sacked and win percentage, this team stood out. 
                     They were the team with the highest count of times sacked, and yet that team went to a Superbowl that year.
-                    On the surface, the existance of this and other outlier teams undermine my hypothesis and should have derailed my project.
+                    On the surface, the existence of this and other outlier teams undermine my hypothesis and should have derailed my project.
                     But instead, it just changed my perspective.
                     <br><br>
                     The 2021 Bengals and other outliers like it suggests that there is more that goes into a NFL team's success than single statistics like sacks.
-                    Success is larger than the season-long perfomance of just a the offensive line and sacks, for example.
+                    Success is larger than the season-long performance of just the offensive line and sacks, for example.
                     <br><br>
                     My biggest takeaway from this project is that when working with data, it's important to be <b>curious</b>. If really wanted to, I could have just
                     handpicked play-by-play and regular season statistic data from any team I wanted, and "prove" that their success was due to their 
@@ -265,7 +265,7 @@
                     </ul>
                     <br>
                     <b>Thank you so much for reading about my NFL Data project.</b>
-                    If you're reading this and want to connect, feel free to <a href="linkedin.com/in/aaronjonesm/" target="_blank">connect with me on LinkedIn.</a>
+                    If you're reading this and want to connect, feel free to <a href="https://www.linkedin.com/in/aaron-matthew-jones/" target="_blank">connect with me on LinkedIn.</a>
                     <br><br>
                     Aaron Jones
                 </p>
