@@ -36,8 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tabButtons.length > 0) tabButtons[0].click();
 });
 
-window.addEventListener('scroll', function() {
-    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    var scrolled = (window.scrollY / docHeight) * 100;
-    document.getElementById('progress-bar').style.width = scrolled + "%";
-});
+const progressBar = document.getElementById('progress-bar');
+if (progressBar) {
+    window.addEventListener('scroll', function() {
+        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var scrolled = (window.scrollY / docHeight) * 100;
+        progressBar.style.width = scrolled + "%";
+    });
+}
