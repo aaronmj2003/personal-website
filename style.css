@@ -973,6 +973,7 @@ footer p{
     .hero-content {
         flex-direction: column-reverse;
         text-align: center;
+        gap: 2rem;
     }
 
     .hero-name {
@@ -1024,6 +1025,44 @@ footer p{
         max-width: 60%;
     }
 
+    /* Stack introduction two-column layout */
+    .intro-content {
+        flex-direction: column;
+    }
+
+    .intro-img {
+        text-align: center;
+    }
+
+    .intro-text-content {
+        padding-left: 0;
+        padding-top: 1.5rem;
+    }
+
+    /* Stack featured project card */
+    .featured-project {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: left;
+    }
+
+    .featured-project-image {
+        width: 100%;
+    }
+
+    .featured-project-content {
+        width: 100%;
+    }
+
+    .featured-project h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Reduce section padding on tablets */
+    .introduction, .personal-life, .projects, .links {
+        padding: 3.5rem 1.5rem;
+    }
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -1046,7 +1085,6 @@ footer p{
     .blog-post {
         max-width: 80%;
         margin: 0 auto;
-        padding: 3.1rem 2rem;
     }
 }
 
@@ -1056,13 +1094,34 @@ footer p{
         min-height: auto;
     }
 
+    .hero-content {
+        gap: 1.5rem;
+    }
+
     .hero-name {
         font-size: 2.75rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
     }
 
     .hero-image img {
         width: 180px;
         height: 180px;
+    }
+
+    .section-heading {
+        font-size: 1.6rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .introduction, .personal-life, .projects, .links {
+        padding: 3rem 1.25rem;
+    }
+
+    .blog-posts {
+        padding: 2rem 1.25rem;
     }
 
     nav {
@@ -1107,8 +1166,13 @@ footer p{
         max-width: 80%;
     }
 
-    .intro-text-content p{
-        font-size: 0.8rem;
+    .intro-text-content p {
+        font-size: 0.875rem;
+    }
+
+    .link-button {
+        width: 100%;
+        max-width: 400px;
     }
 
     .gallery {
@@ -1119,7 +1183,6 @@ footer p{
     .project-container, .link-container {
         flex-direction: column;
     }
-
 
     .blog-post {
         max-width: 90%;
@@ -1151,6 +1214,45 @@ footer p{
 
     nav ul li {
         margin: 0.5rem 0;
+    }
+
+    .hero {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-name {
+        font-size: 2.25rem;
+    }
+
+    .hero-tagline, .hero-desc {
+        font-size: 0.9rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cta-primary, .cta-secondary {
+        text-align: center;
+    }
+
+    .section-heading {
+        font-size: 1.4rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .introduction, .personal-life, .projects, .links {
+        padding: 2rem 1rem;
+    }
+
+    .blog-posts {
+        padding: 1.5rem 1rem;
+    }
+
+    .tabs button {
+        padding: 10px 12px;
+        font-size: 15px;
     }
 
     .intro {
@@ -1201,7 +1303,16 @@ footer p{
     .blog-post {
         max-width: 100%;
         margin: 0 auto;
-        padding: 1.5rem 1rem;
+    }
+
+    .post-page {
+        padding: 1rem;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .post-content h1 {
+        font-size: 1.75rem;
     }
 
     footer {
