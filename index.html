@@ -170,27 +170,35 @@
             <h2>Personal Life</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="images/personal1.jpg" alt="Personal Image 1" class="expandable">
+                    <img src="images/personal1.jpg" alt="Personal Image 1" loading="lazy">
                     <div class="overlay-text">I love going on hikes and backpacking. In this picture, I am at "Cahuilla Peak" in Palm Springs, CA</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/personal2.jpg" alt="Personal Image 2" class="expandable">
+                    <img src="images/personal2.jpg" alt="Personal Image 2" loading="lazy">
                     <div class="overlay-text">I am very close with all of my brothers, including Simon who's checking out some legos with me</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/personal3.jpg" alt="Personal Image 3" class="expandable">
+                    <img src="images/personal3.jpg" alt="Personal Image 3" loading="lazy">
                     <div class="overlay-text">Here's me and Helena at one of her sorority formals</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/personal4.jpg" alt="Personal Image 4" class="expandable">
+                    <img src="images/personal4.jpg" alt="Personal Image 4" loading="lazy">
                     <div class="overlay-text">Me and my family at Ben's wedding (He's the one being held up, if you couldn't tell)</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="images/personal5.jpg" alt="Personal Image 5" class="expandable">
+                    <img src="images/personal5.jpg" alt="Personal Image 5" loading="lazy">
                     <div class="overlay-text">I'm close with my friends at UW, Here's a picture of me (left), Ben (center), and Brian (right)</div>
                 </div>
             </div>
         </section>
+
+        <div id="gallery-lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <span class="close" id="gallery-close" aria-label="Close">&times;</span>
+            <div class="lightbox-inner">
+                <img class="lightbox-content" id="gallery-lightbox-img" src="" alt="">
+                <p class="lightbox-caption" id="gallery-lightbox-caption"></p>
+            </div>
+        </div>
     </main>
     <footer id="contact">
         <div class="container">

@@ -23,25 +23,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Gallery: expand image on click, collapse on second click
-    const expandableImages = document.querySelectorAll('.expandable');
+    // Gallery lightbox
+    const galleryLightbox = document.getElementById('gallery-lightbox');
+    const galleryImg     = document.getElementById('gallery-lightbox-img');
+    const galleryCaption = document.getElementById('gallery-lightbox-caption');
+    const galleryClose   = document.getElementById('gallery-close');
 
-    expandableImages.forEach(img => {
-        img.addEventListener('click', () => {
-            if (img.classList.contains('expanded')) {
-                img.classList.remove('expanded');
-                img.nextElementSibling.style.opacity = '0';
-            } else {
-                // Remove the expanded class from all images before adding to the clicked one
-                expandableImages.forEach(i => {
-                    i.classList.remove('expanded');
-                    i.nextElementSibling.style.opacity = '0';
-                });
-                img.classList.add('expanded');
-                img.nextElementSibling.style.opacity = '1';
-            }
+    function openGalleryLightbox(img) {
+        galleryImg.src = img.src;
+        galleryImg.alt = img.alt;
+        galleryCaption.textContent = img.nextElementSibling?.textContent.trim() || '';
+        galleryLightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeGalleryLightbox() {
+        galleryLightbox.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    if (galleryLightbox) {
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+            img.addEventListener('click', () => openGalleryLightbox(img));
         });
-    });
+        galleryClose.addEventListener('click', closeGalleryLightbox);
+        galleryLightbox.addEventListener('click', e => {
+            if (e.target === galleryLightbox) closeGalleryLightbox();
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeGalleryLightbox();
+        });
+    }
 
     // Tabs: switch active tab on click
     const tabButtons = document.querySelectorAll('.tablinks');
