@@ -1,7 +1,8 @@
 :root {
     --primary-color: #fd5c63;
     --bg-primary:    #f4f4f4;
-    --bg-tertiary:   #f8f8ff;
+    --bg-alt:        #ffffff;
+    --bg-tertiary:   #f0f0f8;
     --text-primary:  #333333;
     --text-secondary:#555555;
     --text-muted:    #666666;
@@ -14,7 +15,8 @@
 
 [data-theme="dark"] {
     --bg-primary:    #111111;
-    --bg-tertiary:   #1e1e1e;
+    --bg-alt:        #1a1a1a;
+    --bg-tertiary:   #161618;
     --text-primary:  #e5e7eb;
     --text-secondary:#9ca3af;
     --text-muted:    #6b7280;
@@ -379,13 +381,20 @@ nav ul li a:hover::after {
     padding: 0 20px;
 }
 
+/* Section heading accent */
+.section-heading {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid var(--primary-color);
+}
+
 /* Introduction */
 .introduction {
-    padding: 4rem 2rem 6rem 2rem;
-    margin: 1rem 0;
+    padding: 5rem 2rem;
     background: var(--bg-tertiary);
-    border-radius: 8px;
-    box-shadow: 0 0 10px var(--shadow-color);
 }
 
 .intro-content {
@@ -493,7 +502,8 @@ footer p{
 
 /* PERSONAL LIFE */
 .personal-life {
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
+    background-color: var(--bg-alt);
 }
 
 .gallery {
@@ -571,7 +581,7 @@ footer p{
 
 /* PROJECTS */
 .projects {
-    padding: 2rem 0;
+    padding: 5rem 2rem;
     background-color: var(--bg-primary);
     text-align: center;
 }
@@ -662,8 +672,8 @@ footer p{
 
 /* LINKS */
 .links {
-    padding: 4rem 2rem;
-    background-color: var(--bg-primary);
+    padding: 5rem 2rem;
+    background-color: var(--bg-alt);
     text-align: center;
 }
 
